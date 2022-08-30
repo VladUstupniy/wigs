@@ -1,0 +1,337 @@
+//-----[---ШРИФТЫ---]-----------------------------------------------------------------------------------------------------------------
+//-----[Подключаем шрифты/]-----------------------------------------------------------------------------------------------------------
+@import "sourse-styles/fonts.scss";
+//-----[/Подключаем шрифты/]----------------------------------------------------------------------------------------------------------
+
+//-----[Шрифт по умолчанию/]----------------------------------------------------------------------------------------------------------
+//$fontfamily:'Poppins';
+body {
+	font-family: 'Lexend', sans-serif;
+	font-style: normal;
+	color: #000;
+}
+//-----[/Шрифт по умолчанию/]---------------------------------------------------------------------------------------------------------
+//-----[--/ШРИФТЫ/--]-----------------------------------------------------------------------------------------------------------------
+
+
+
+
+//-----[---ПЕРЕМЕННЫЕ---]-------------------------------------------------------------------------------------------------------------
+//$min-width: 320px;
+//-----[--/ПЕРЕМЕННЫЕ/--]-------------------------------------------------------------------------------------------------------------
+
+
+
+
+//-----[---ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ---]---------------------------------------------------------------------------------------------
+@import "sourse-styles/null.scss";
+
+body {
+	
+}
+//-----[--/ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ/--]---------------------------------------------------------------------------------------------
+
+
+
+
+//-----[---ОБОЛОЧКА---]---------------------------------------------------------------------------------------------------------------
+.wrapper {
+	min-height: 100%;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 252px) minmax(auto, 1188px) 1fr;
+}
+//-----[--/ОБОЛОЧКА/--]---------------------------------------------------------------------------------------------------------------
+
+
+
+
+//-----[---ОСНОВНАЯ СЕТКА---]---------------------------------------------------------------------------------------------------------
+/* .container {
+
+} */
+//-----[--/ОСНОВНАЯ СЕТКА/--]---------------------------------------------------------------------------------------------------------
+
+
+
+
+//-----[---ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ---]--------------------------------------------------------------------------
+@import "sourse-styles/titles.scss";
+@import "sourse-styles/colors.scss";
+//-----[--/ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ/--]--------------------------------------------------------------------------
+
+
+
+
+//-----[---ОСНОВНОЙ БЛОК---]----------------------------------------------------------------------------------------------------------
+.sidebar {
+	grid-column: 2 / 3;
+	padding: 40px 42px 40px 56px;
+	display: flex;
+	flex-direction: column;
+}
+.sidebar__logo {
+	position: relative;
+	display: flex;
+	flex: 0 0 auto;
+	font-weight: 400;
+	font-size: 21px;
+	line-height: 27px;
+	color: #000;
+	margin: 0px 0px 66px 0px;
+	padding: 0px 0px 0px 20px;
+	&::before,
+	&::after {
+		position: absolute;
+		display: block;
+		content: '';
+	}
+	&::before {
+		width: 12px;
+		height: 3px;
+		background-color: #000;
+		top: 15%;
+    	left: 44%;
+    	transform: translate(-10%, 0%);
+	}
+	&::after {
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		background: #F4DE4D;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		transform: translate(-15%, -20%);
+	}
+}
+.sidebar__title {
+	font-weight: 800;
+	font-size: 30px;
+	line-height: 47px;
+	margin: 0px 0px 44px 0px;
+}
+.sidebar__list {
+	flex: 1 0 auto;
+}
+.sidebar__link {
+	display: block;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000;
+	margin: 0px 0px 27px 0px;
+	padding: 0px 0px 0px 34px;
+}
+
+.sidebar__img--01 {
+	background: url('../img/sidebar/sidebar-01.svg') 0% 50% / contain no-repeat;
+}
+.sidebar__img--02 {
+	background: url('../img/sidebar/sidebar-02.svg') 0% 50% / contain no-repeat;
+}
+.sidebar__img--03 {
+	background: url('../img/sidebar/sidebar-03.svg') 0% 50% / contain no-repeat;	
+}
+.sidebar__img--04 {
+	background: url('../img/sidebar/sidebar-04.svg') 0% 50% / contain no-repeat;	
+}
+.sidebar__img--05 {
+	background: url('../img/sidebar/sidebar-05.svg') 0% 50% / contain no-repeat;	
+}
+.sidebar__img--06 {
+	background: url('../img/sidebar/sidebar-06.svg') 0% 50% / contain no-repeat;	
+}
+.sidebar__img--07 {
+	background: url('../img/sidebar/sidebar-07.svg') 0% 50% / contain no-repeat;	
+}
+
+.sidebar__support {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+}
+.support__image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 47px;
+	height: 47px;
+	border-radius: 50%;
+	background: #F6F6F6;
+	margin: 0px 16px 0px 0px;
+	img {
+		display: block;
+	}
+}
+.support__text {
+	font-weight: 400;
+	font-size: 15.7099px;
+	line-height: 24px;
+	color: #000;
+}
+.main {
+	grid-column: 3 / 4;
+	padding: 40px 0px 40px 0px;
+}
+.header {
+	margin: 0px 0px 70px 0px;
+}
+.header__nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__form {
+	flex: 1 0 auto;
+	display: flex;
+	align-items: center;
+}
+.header__input {
+	width: 100%;
+	padding: 7px 15px;
+	&::placeholder {
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 22px;
+		color: #000000;
+		opacity: 0.2;
+	}
+}
+.header__links--wrapper {
+	display: flex;
+}
+.header__links {
+	margin: 0px 50px 0px 0px;
+	&:last-child {
+		margin: 0;
+	}
+}
+.header__link {
+	padding: 0px 2px 7px 0px;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 22px;
+	color: #000;
+	margin: 0px 42px 0px 0px;
+	border-bottom: 2px solid transparent;
+	&:last-child {
+		margin: 0;
+	}
+}
+.header__link.active {
+	border-bottom: 2px solid #000;
+}
+.header__link--basket {
+	margin: 0px 25px 0px 0px;
+}
+.header__link--person {
+}
+.content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	/* grid-template-columns: repeat(auto-fit, minmax(259px ,1fr)); */
+	grid-template-rows: 180px 180px 180px 180px;
+	/* grid-template-rows: repeat(auto-fit, minmax(180px ,1fr)); */
+	gap: 21px;
+	/* grid-auto-rows: 1fr; */
+}
+.content__item {
+	border-radius: 15px;
+}
+.content__item--1 {
+	grid-column: 1 / 3;
+	grid-row: 1 / 2;
+	background: #BCE7F0 url('../img/bg/bg-01.svg') center center / cover no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+}
+.content__text {
+	text-align: center;
+	font-weight: 800;
+	font-size: 30px;
+	line-height: 47px;
+}
+.content__item--2 {
+	grid-column: 3 / 4;
+	grid-row: 1 / 3;
+	background: url('../img/bg/bg-02.png') 0 0 / cover no-repeat;
+	position: relative;
+}
+.content__item--3 {
+	grid-column: 4 / 5;
+	grid-row: 1 / 3;
+	background: url('../img/bg/bg-03.png') 0 0 / cover no-repeat;
+	position: relative;
+}
+.content__item--4 {
+	grid-column: 1 / 3;
+	grid-row: 2 / 3;
+	background: #DEC8F3 url('../img/bg/bg-04.svg') center center / cover no-repeat;
+}
+.content__item--5 {
+	grid-column: 1 / 2;
+	grid-row: 3 / 5;
+	position: relative;
+	background: url('../img/bg/bg-05.png') 0 0 / cover no-repeat;
+}
+.content__item--6 {
+	grid-column: 2 / 3;
+	grid-row: 3 / 5;
+	position: relative;
+	background: url('../img/bg/bg-06.png') 0 0 / cover no-repeat;
+}
+.content__item--7 {
+	grid-column: 3 / 5;
+	grid-row: 3 / 4;
+	background: #F4DE4D url('../img/bg/bg-07.png') 100% 100% / contain no-repeat;
+	padding: 60px 0px 0px 30px;
+}
+.content__item--8 {
+	grid-column: 3 / 5;
+	grid-row: 4 / 5;
+	background: #E9E5E2 url('../img/bg/bg-08.png') 100% 100% / contain no-repeat;
+	padding: 60px 0px 0px 30px;
+}
+.content__subtitle {
+	font-weight: 800;
+	font-size: 26px;
+	line-height: 40px;
+	margin: 0px 0px 3px 0px;
+}
+.content__subtitle--blue {
+	color: #001AA2;
+}
+.content__subtitle--orange {
+	color: #FD2E24;
+}
+.content__desc {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 23px;
+	color: #000;
+}
+.content-item__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 20px;
+	right: 22px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	background-color: #fff;
+	img {
+		display: block;
+	}
+}
+//-----[--/ОСНОВНОЙ БЛОК/--]----------------------------------------------------------------------------------------------------------
+
+
+
+
+//-----[---Вспомогательные стили---]--------------------------------------------------------------------------------------------------
+
+//-----[--/Вспомогательные стили/--]-------------------------------------------------------------------------------------------------- 
